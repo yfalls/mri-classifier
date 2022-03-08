@@ -1,14 +1,20 @@
 from flask import Flask, render_template, request
 from keras.models import load_model
 from keras.preprocessing import image
-
+import os
 import numpy as np
+import h5py
 
 app = Flask(__name__)
 
-model = load_model('model.h5')
+file_name = os.path.dirname(__file__) +'\\model.h5'
+model_file = h5py.File(file_name, "r")
+
+model = load_model(model_file)
 
 model.make_predict_function()
+
+
 
 def predict_label(img_path):
     img = image.load_img(img_path , target_size = (512,512))

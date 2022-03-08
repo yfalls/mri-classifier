@@ -4,3 +4,5 @@ numpy==1.20.3
 itsdangerous == 2.0.1
 gunicorn == 20.1.0
 tensorflow-cpu == 2.8.0
+h5py == 3.2.1
+os
