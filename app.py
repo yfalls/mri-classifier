@@ -7,7 +7,7 @@ import h5py
 
 app = Flask(__name__)
 
-file_name = os.path.dirname(__file__) +'\\model.h5'
+file_name = os.path.dirname(__file__) +'/model.h5'
 model_file = h5py.File(file_name, "r")
 
 model = load_model(model_file)
