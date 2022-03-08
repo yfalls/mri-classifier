@@ -6,6 +6,7 @@ import numpy as np
 import h5py
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'someRandomKey'
 
 file_name = os.path.dirname(__file__) +'/model.h5'
 model_file = h5py.File(file_name, "r")
