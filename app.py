@@ -4,7 +4,7 @@ from tensorflow.keras.models import load_model
 from keras.preprocessing import image
 import os
 import numpy as np
-import h5py
+import h5py as h5
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'someRandomKey'
