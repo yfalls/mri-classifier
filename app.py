@@ -9,10 +9,10 @@ import h5py as h5
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'someRandomKey'
 
-file_name = os.path.dirname(__file__) +'/model.h5'
-model_file = h5py.File(file_name, "r")
+#file_name = os.path.dirname(__file__) +'/model.h5'
+#model_file = h5py.File(file_name, "r")
 
-model = load_model(model_file)
+model = load_model('model.h5')
 
 model.make_predict_function()
 
